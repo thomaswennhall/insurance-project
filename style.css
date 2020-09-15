@@ -1,0 +1,402 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: snow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wrapper {
+    max-width: 1125px;
+}
+
+header {
+    width: 100%;
+}
+.intro {
+    background-color: rgb(201, 234, 245);
+    background-image: url("imgs/family.png");
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 1.5em 1.5em;
+}
+.intro-content {
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+h1 {
+    font-family: Lora, 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+}
+p {
+    font-family: 'Open Sans', 'Montserrat', Arial, Helvetica, sans-serif;
+    color: rgb(70, 69, 69);
+    line-height: 1.6;
+    font-weight: 600;
+}
+.white-text {
+    color: snow;
+}
+.join-now {
+    font-family: Open Sans, Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 0.8em;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    display: block;
+    background-color: snow;
+    padding: 1em 3em;
+    border-radius: 2em;
+    box-shadow: rgba(169, 169, 169, 0.459) 0 0.2em;
+}
+.join-now:hover {
+}
+.join-now:active {
+}
+
+/*--- LEARN & JOIN ---*/
+.sub-header {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h3 {
+    font-family: Lora, 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+    color: snow;
+}
+h3 > a {
+    color: snow;
+    text-decoration: none;
+}
+#learn > h3 > a:hover {
+    color: rgb(255, 209, 56);
+}
+#join > h3 > a:hover {
+    color: rgb(241, 128, 62);
+}
+.small-heading {
+    font-size: 0.8em;
+}
+#learn {
+    background-color: rgb(241, 128, 62);
+}
+#join {
+    background-color: rgb(255, 209, 56);
+}
+
+/*----- NAVIGATION -----*/
+nav {
+    display: none;
+}
+
+/*-------- MAIN --------*/
+main {
+    background-color: rgb(185, 185, 185);
+    width: 100%;
+    height: auto;
+    padding: 1.5em;
+    padding-bottom: 4em;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+h2 {
+    font-family: Lora, 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+    color: snow;
+}
+.main-information > a {
+    display: none;
+}
+
+.cards-container {
+    width: 100%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: top;
+}
+.card {
+    background-color: snow;
+    width: 18em;
+    height: auto;
+    border-radius: 0.5em;
+    padding: 0 1em 2em 1em;
+    margin-top: 4em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-visual {
+    background-color: rgb(201, 234, 245);
+    width: 105%;
+    border-radius: 0.5em;
+    margin-top: -2em;
+    padding-top: 1em;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+}
+.card-visual.adult {
+    background-color: rgb(255, 209, 56);
+}
+.card-visual.old {
+    background-color: rgb(241, 128, 62);
+}
+.card-image {
+    width: 6em;
+
+    object-fit: cover;
+    object-position: top;
+    height: 9em;
+}
+.card-heading {
+    font-family: Lora, 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+.card > p {
+    font-size: 0.8em;
+    color: rgb(146, 146, 146);
+    text-align: center;
+}
+
+/*------ ABOUT US ------*/
+.about-us {
+    background-color: rgb(255, 209, 56);
+    padding: 1.5em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+/*---- HOW IT WORKS ----*/
+.summary-grid {
+
+    /*display: grid;
+    grid-column: 1fr;
+    grid-row: repeat(6, 1fr);*/
+    
+    /*display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;*/
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+}
+.summary-item {
+    flex: 1 1 375px;
+
+    height: 24vh;
+    background-color: snow;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    padding: 0.8em;
+}
+.item0 {
+    background-color: rgb(201, 234, 245);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item2 {
+    background-color: rgb(185, 185, 185);
+}
+.item4 {
+    background-color: rgb(241, 128, 62);
+}
+.summary-item > p {
+    align-self: center;
+    margin-top: 1em;
+}
+.item4 > p {
+    margin-top: 2em;
+}
+.item5 > p {
+    margin-top: 2em;
+}
+.summary-number {
+    color: rgba(92, 92, 92, 0.733);
+    font-family: Lora, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    align-self: flex-start;
+}
+footer {
+    background-color: rgb(143, 143, 143);
+    padding-bottom: 2em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer > p {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: rgb(70, 69, 69);
+    font-size: 1.4em;
+    line-height: 1.6;
+    font-weight: 700;
+}
+footer > a {
+    text-decoration: none;
+    font-family: 'Open Sans', 'Montserrat', Arial, Helvetica, sans-serif;
+    color: rgb(70, 69, 69);
+    line-height: 1.6;
+    font-weight: 600;
+    display: block;
+}
+
+@media screen and (min-width: 750px) {
+    header {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+    }
+    .intro {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+
+        background-size: 60%;
+        background-position: bottom right;
+    }
+    .intro-content {
+        padding: 5em 3em 0 3em;
+        justify-content: space-evenly;
+    }
+    .intro-content > a {
+        margin-top: 2em;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        background-color: snow;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+        position: sticky;
+        top: 0;
+    }
+    .nav-li {
+        list-style: none;
+        width: 25%;
+        text-align: center;
+    }
+    .nav-li > a {
+        text-decoration: none;
+        display: block;
+        font-family: 'Open Sans', 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        font-weight: 600;
+        color: rgba(92, 92, 92, 0.733);
+        padding: 1em 0;
+    }
+    .nav-li > a:hover {
+        color: rgb(70, 69, 69);
+    }
+    .nav-li > a:active {
+        background-color: rgb(185, 185, 185);
+        color: snow;
+    }
+
+    main {
+        padding: 4em;
+    }
+    .main-information {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto;
+
+        margin: 2em 0;
+        align-items: center;
+    }
+    .main-information > h2 {
+        grid-column: 1 / span 4;
+        grid-row: 1;
+        align-self: baseline;
+    }
+    .main-information > a {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+
+        display: flex;
+        justify-content: center;
+    }
+    .main-information > p {
+        grid-column: 9 / span 4;
+        grid-row: span 2;
+    }
+    .cards-container {
+        justify-content: space-between;
+    }
+    .about-us {
+        margin-top: -220px;
+        padding: 220px 150px 120px 150px;
+    }
+
+    .summary-item {
+        height: 375px;
+    }
+    .summary-item > p {
+        align-self: center;
+        margin-top: 7em;
+    }
+    .item4 > p {
+        margin-top: 8em;
+    }
+    .item5 > p {
+        margin-top: 8em;
+    }
+    .item2 {
+        background-color: snow;
+    }
+    .item3 {
+        background-color: rgb(185, 185, 185);
+    }
+}
+@media screen and (min-width: 1125px) {
+    .about-us {
+        margin-top: -220px;
+        padding: 220px 300px 120px 300px;
+    }
+
+    .item2 {
+        background-color: rgb(185, 185, 185);
+    }
+    .item3 {
+        background-color: snow;
+    }
+}
