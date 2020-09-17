@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;
 }
+:root {
+    --main-yellow: rgb(248, 176, 65);
+}
+
 body {
     background-color: snow;
     display: flex;
@@ -18,7 +22,7 @@ header {
 }
 .intro {
     background-color: rgb(201, 234, 245);
-    background-image: url("imgs/family.png");
+    background-image: url("img/family.png");
     background-size: 100%;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -47,6 +51,19 @@ p {
     color: snow;
 }
 .join-now {
+    width: 120px;
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.6s;
+    font-family: Open Sans, Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 0.8em;
+    margin: 25px 0;
+
+    /*
     font-family: Open Sans, Montserrat, sans-serif;
     font-weight: 700;
     font-size: 0.8em;
@@ -58,10 +75,14 @@ p {
     padding: 1em 3em;
     border-radius: 2em;
     box-shadow: rgba(169, 169, 169, 0.459) 0 0.2em;
+    */
 }
+
 .join-now:hover {
+    box-shadow: 0px 4px #888888;
 }
 .join-now:active {
+    border: none;
 }
 
 /*--- LEARN & JOIN ---*/
@@ -128,9 +149,9 @@ h2 {
     width: 100%;
 
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: top;
+    align-items: center;
 }
 .card {
     background-color: snow;
@@ -289,9 +310,6 @@ footer > a {
         padding: 5em 3em 0 3em;
         justify-content: space-evenly;
     }
-    .intro-content > a {
-        margin-top: 2em;
-    }
 
     nav {
         width: 100%;
@@ -348,15 +366,12 @@ footer > a {
         grid-row: 1;
         align-self: baseline;
     }
-    .main-information > a {
+    .main-information > button {
         grid-column: 1 / span 2;
         grid-row: 2;
-
-        display: flex;
-        justify-content: center;
     }
     .main-information > p {
-        grid-column: 9 / span 4;
+        grid-column: 8 / span 4;
         grid-row: span 2;
     }
     .cards-container {
@@ -387,6 +402,13 @@ footer > a {
         background-color: rgb(185, 185, 185);
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .cards-container{
+        flex-direction: row;
+    }
+}
+
 @media screen and (min-width: 1125px) {
     .about-us {
         margin-top: -220px;
