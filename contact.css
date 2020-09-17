@@ -27,10 +27,6 @@ body {
     justify-content: center;
 }
 
-/* .wrapper {
-    max-width: 1125px;
-} */
-
 header {
     background-color: rgb(200, 221, 233);
     background-image: url("img/baby-and-man.png");
@@ -116,7 +112,6 @@ main > form {
 
     display: flex;
     flex-direction: column;
-
 }
 
 input, textarea {
@@ -228,7 +223,6 @@ footer {
     
         display: flex;
         flex-direction: column;
-    
     }
 
     footer {
